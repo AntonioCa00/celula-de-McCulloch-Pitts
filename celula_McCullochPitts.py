@@ -4,6 +4,7 @@ import json
 
 #
 def mcculloch_pitts(num_bits, operation):
+    print ("Numero de bits: ", str(num_bits), " Operacion logica: ", operation)
     bit_sequences = [[int(j) for j in list('{0:b}'.format(i).zfill(num_bits))] for i in range(2**num_bits)]
     print("Secuencias de bits generadas:")
     print(bit_sequences)
@@ -25,7 +26,9 @@ def mcculloch_pitts(num_bits, operation):
         
         print("{}= {}. Pesos: {}".format(seq, output, weights))
 
-
+mcculloch_pitts(3, "or")
+mcculloch_pitts(4, "and")
+mcculloch_pitts(1, "not")
 
 class Celula():
 
